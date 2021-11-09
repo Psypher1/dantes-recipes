@@ -1,3 +1,4 @@
+import styles from "../styles/Home.module.css";
 import RecipeCard from "../components/RecipeCard";
 import client from "../utils/contentfulClient";
 
@@ -16,7 +17,7 @@ export default function Recipes({ recipes }) {
   // console.log(recipes);
   // const {title, }
   return (
-    <div className="recipe-list">
+    <div className={styles.recipeList}>
       {/* loop through recipes */}
       {recipes.map((recipe) => (
         // pass recipe as props
