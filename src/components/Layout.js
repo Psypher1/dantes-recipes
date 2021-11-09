@@ -8,7 +8,7 @@ export default function Layout({ children }) {
           <a>
             <h1>
               <span>Dante's Recipes</span>
-              <span>Here is what I like making</span>
+              <span>Here's what I like making</span>
             </h1>
           </a>
         </Link>
