@@ -15,8 +15,8 @@ export default function RecipeCard({ recipe }) {
       <div className={styles.featured}>
         <Image
           src={`https:${thumbnail.fields.file.url}`}
-          width={500}
-          height={500}
+          width={600}
+          height={400}
         />
       </div>
       <div className={styles.content}>

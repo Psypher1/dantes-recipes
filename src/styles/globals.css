@@ -3,7 +3,7 @@ body {
   background: lightcyan;
   margin: 0;
   font-family: "Lato";
-  font-size: 1.5em;
+  font-size: 1rem;
 }
 
 .layout {
@@ -30,13 +30,13 @@ header span {
   line-height: 1em;
 }
 header span:first-child {
-  font-size: 0.5em;
+  font-size: 1.5rem;
   font-weight: 400;
   text-transform: uppercase;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 header span:last-child {
-  font-size: 1em;
+  font-size: 3.5rem;
   font-weight: 800;
 }
 header h2 {

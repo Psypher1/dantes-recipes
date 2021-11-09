@@ -10,11 +10,12 @@
   left: -10px;
 }
 .info {
-  padding: 16px;
+  padding: 1rem;
 }
 .info h4 {
+  font-size: 1.5rem;
   margin: 4px 0;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .info p {
   margin: 0;
