@@ -1,0 +1,5 @@
+.recipeList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.2rem 3.5rem;
+}
