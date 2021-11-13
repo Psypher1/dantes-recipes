@@ -13,11 +13,7 @@ export default function RecipeCard({ recipe }) {
   return (
     <div className={styles.card}>
       <div className={styles.featured}>
-        <Image
-          src={`https:${thumbnail.fields.file.url}`}
-          width={600}
-          height={400}
-        />
+        <Image src={`https:${thumb}`} width={600} height={400} />
       </div>
       <div className={styles.content}>
         <div className={styles.info}>
