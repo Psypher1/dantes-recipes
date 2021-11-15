@@ -1,4 +1,7 @@
 import client from "../../utils/contentfulClient";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import styles from "../../styles/recipe.module.css";
+import Image from "next/image";
 
 export async function getStaticPaths() {
   const res = await client.getEntries({
@@ -35,13 +38,30 @@ export async function getStaticProps({ params }) {
   };
 }
 export default function RecipeDetails({ recipe }) {
-  console.log(recipe);
-  const { title, slug, cookingTime, thumbnail } = recipe.fields;
+  const { featuredImage, title, cookingTime, ingredients, method } =
+    recipe.fields;
+  const featured = featuredImage.fields.file.url;
+  const width = featuredImage.fields.file.details.image.width;
+  const height = featuredImage.fields.file.details.image.height;
+  // const { title, slug, cookingTime, thumbnail } = recipe.fields;
   return (
     <div>
-      Recipe Details
-      <h1>{title}</h1>
-      <p>{cookingTime}</p>
+      <div className={styles.banner}>
+        <Image src={`https:${featured}`} width={900} height={400} />
+        <h2>{title}</h2>
+      </div>
+      <div className={styles.info}>
+        <p>Takes about {cookingTime} mins</p>
+        <h3>Ingredients:</h3>
+        {ingredients.map((ing) => (
+          <span key={ing}>{ing}</span>
+        ))}
+
+        <div className={styles.method}>
+          <h3>Method</h3>
+          {documentToReactComponents(method)}
+        </div>
+      </div>
     </div>
   );
 }
