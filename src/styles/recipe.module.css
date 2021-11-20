@@ -1,0 +1,27 @@
+.banner {
+  margin-bottom: 2rem;
+}
+.banner h2 {
+  text-transform: uppercase;
+}
+.info p {
+  margin: 0;
+}
+.info span::after {
+  content: ", ";
+}
+.info span:last-child::after {
+  content: ".";
+}
+
+.banner h2 {
+  margin: 0;
+  background: #fff;
+  display: inline-block;
+  padding: 20px;
+  /* position: relative;
+  top: -10px;
+  left: -700px; */
+  transform: rotateZ(-1deg);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}

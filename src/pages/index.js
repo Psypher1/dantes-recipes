@@ -1,3 +1,4 @@
+import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import RecipeCard from "../components/RecipeCard";
 import client from "../utils/contentfulClient";
@@ -17,12 +18,18 @@ export default function Recipes({ recipes }) {
   // console.log(recipes);
   // const {title, }
   return (
-    <div className={styles.recipeList}>
-      {/* loop through recipes */}
-      {recipes.map((recipe) => (
-        // pass recipe as props
-        <RecipeCard key={recipe.sys.id} recipe={recipe} />
-      ))}
-    </div>
+    <>
+      <Head>
+        <title>Dante's Recipes</title>
+      </Head>
+
+      <div className={styles.recipeList}>
+        {/* loop through recipes */}
+        {recipes.map((recipe) => (
+          // pass recipe as props
+          <RecipeCard key={recipe.sys.id} recipe={recipe} />
+        ))}
+      </div>
+    </>
   );
 }
